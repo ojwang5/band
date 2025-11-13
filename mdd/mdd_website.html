@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uganda Police Force - MDD Department</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#60A5FA',secondary:'#F87171'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #FFFFFF;
+color: #1F2937;
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+.animate-bounce {
+animation: float 2s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+.container {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+.hero-section {
+min-height: 480px;
+}
+.hero-overlay {
+background: linear-gradient(180deg, rgba(17,24,39,0.95) 0%, rgba(17,24,39,0.85) 100%);
+}
+.service-card, .branch-card {
+transform: none !important;
+}
+.grid {
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+h1 {
+font-size: 1.875rem;
+line-height: 2.25rem;
+}
+h2 {
+font-size: 1.5rem;
+line-height: 2rem;
+}
+h3 {
+font-size: 1.25rem;
+line-height: 1.75rem;
+}
+}
+.hero-section {
+background-image: url('bnd6.jpg');
+background-size: cover;
+background-position: center;
+}
+.hero-overlay {
+background: linear-gradient(90deg, rgba(17,24,39,0.95) 0%, rgba(17,24,39,0.85) 50%, rgba(17,24,39,0.4) 100%);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #0A3161;
+}
+.custom-checkbox {
+display: inline-block;
+width: 20px;
+height: 20px;
+background: white;
+border: 2px solid #0A3161;
+border-radius: 4px;
+position: relative;
+}
+.custom-checkbox.checked::after {
+content: '';
+position: absolute;
+width: 12px;
+height: 12px;
+background: #0A3161;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 2px;
+}
+.custom-radio {
+display: inline-block;
+width: 20px;
+height: 20px;
+background: white;
+border: 2px solid #0A3161;
+border-radius: 50%;
+position: relative;
+}
+.custom-radio.checked::after {
+content: '';
+position: absolute;
+width: 12px;
+height: 12px;
+background: #0A3161;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 24px;
+}
+.custom-switch-track {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 34px;
+}
+.custom-switch-thumb {
+position: absolute;
+height: 20px;
+width: 20px;
+left: 2px;
+bottom: 2px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+.custom-switch.active .custom-switch-track {
+background-color: #0A3161;
+}
+.custom-switch.active .custom-switch-thumb {
+transform: translateX(26px);
+}
+.custom-range {
+
+width: 100%;
+height: 8px;
+border-radius: 5px;
+background: #e0e0e0;
+outline: none;
+}
+.custom-range::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #0A3161;
+cursor: pointer;
+}
+.custom-range::-moz-range-thumb {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #0A3161;
+cursor: pointer;
+}
+.tab-switcher .tab-btn.active {
+background-color: #0A3161;
+color: white;
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.branch-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+<body class="bg-gray-900">
+<!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-12 h-12 flex items-center justify-center mr-3">
+<img src="logo.jpg" alt="Uganda Police Force Logo" class="w-full h-full object-contain">
+</div>
+<div>
+<h1 class="text-primary font-bold text-xl">Uganda Police Force</h1>
+<p class="text-gray-600 text-xs">Music, Dance & Drama Department</p>
+</div>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#home" class="text-gray-600 hover:text-primary font-medium">Home</a>
+<a href="#about" class="text-gray-600 hover:text-primary font-medium">About Us</a>
+<a href="#services" class="text-gray-600 hover:text-primary font-medium">Services</a>
+<a href="#news" class="text-gray-600 hover:text-primary font-medium">News</a>
+<a href="#contact" class="text-gray-600 hover:text-primary font-medium">Contact</a>
+<div class="relative">
+<input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 rounded-full border border-gray-200 bg-gray-50 text-gray-700 text-sm focus:border-primary placeholder-gray-400">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</div>
+<div class="hidden md:flex items-center space-x-3">
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-tiktok-fill"></i>
+</a>
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-x-line"></i>
+</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="#home" class="text-gray-700 hover:text-primary font-medium py-2">Home</a>
+<a href="#about" class="text-gray-700 hover:text-primary font-medium py-2">About Us</a>
+<a href="#services" class="text-gray-700 hover:text-primary font-medium py-2">Services</a>
+<a href="#news" class="text-gray-700 hover:text-primary font-medium py-2">News</a>
+<a href="#contact" class="text-gray-700 hover:text-primary font-medium py-2">Contact</a>
+<div class="relative mt-3">
+<input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 text-sm">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-search-line"></i>
+</div>
+</div>
+<div class="flex items-center space-x-3 mt-3 pt-3 border-t border-gray-200">
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#"  target="_blank" class ="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-whatsapp-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="home" class="hero-section relative min-h-[600px] flex items-center">
+<div class="hero-overlay absolute inset-0"></div>
+<div class="container mx-auto px-4 py-16 relative z-10">
+<div class="w-full md:w-1/2">
+<h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">Celebrating Uganda's Culture Through Music</h1>
+<p class="text-gray-100 text-lg mb-8">The Uganda Police Force Music, Dance and Drama Department preserves and promotes our cultural heritage while serving the nation with pride. Discover our world-class performances, training programs, and cultural initiatives.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#services" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-md whitespace-nowrap">Our Services</a>
+<a href="#contact" class="bg-white text-primary px-6 py-3 rounded-button font-medium border border-primary hover:bg-gray-50 transition-colors shadow-md whitespace-nowrap">Contact Us</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Links Section -->
+<section class="py-8 md:py-12 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-10">Quick Links</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+<a href="#brass-band" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-trumpet-line text-primary text-2xl"></i>
+</div>
+<h3 class="font-medium text-gray-800">Brass Band</h3>
+</a>
+<a href="#jazz-band" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-music-2-line text-primary text-2xl"></i>
+</div>
+<h3 class="font-medium text-gray-800">Jazz Band</h3>
+</a>
+<a href="#cultural-troupe" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-user-voice-line text-primary text-2xl"></i>
+</div>
+<h3 class="font-medium text-gray-800">Cultural Troupe</h3>
+</a>
+<a href="#music-training" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-graduation-cap-line text-primary text-2xl"></i>
+</div>
+<h3 class="font-medium text-gray-800">Music Training/Teaching</h3>
+</a>
+<a href="#instrument-repair" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-tools-line text-primary text-2xl"></i>
+</div>
+<h3 class="font-medium text-gray-800">Instrument Repair</h3>
+</a>
+<a href="#choir" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-mic-line text-primary text-2xl"></i>
+</div>
+<h3 class="font-medium text-gray-800">Choir</h3>
+</a>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section id="about" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Learn about the Uganda Police Force Music, Dance and Drama Department, our mission, vision, and branches across the country.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12 mb-16">
+<div class="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+<h3 class="text-2xl font-bold text-primary mb-6">Department Overview</h3>
+<p class="text-gray-600 mb-6">The Music, Dance and Drama Department of the Uganda Police Force was established in 1945 as a ceremonial unit by a british millitary officer from the Royal band named <b>TEDDY BEAR</b>. Over the years, it has evolved into a multifaceted cultural institution that not only serves the ceremonial needs of the police force but also represents Uganda's rich cultural heritage on national and international platforms.</p>
+<p class="text-gray-600">Today, our department comprises over 300 talented musicians, dancers, and performers who are dedicated to preserving and promoting Uganda's diverse cultural expressions while fulfilling our duties to the nation.</p>
+</div>
+<div class="bg-white rounded-lg shadow-md p-8">
+<div class="bg-primary/10 rounded-lg p-6 mb-6">
+<h3 class="text-xl font-bold text-primary mb-3">Our Mission</h3>
+<p class="text-gray-700">To preserve, promote, and present Uganda's cultural heritage through excellence in music, dance, and drama while serving the Uganda Police Force and the nation with pride and distinction.</p>
+<p class="text-gray-700">To collaborate with the community for prior community policing..</p>
+</div>
+<div class="bg-secondary/10 rounded-lg p-6">
+<h3 class="text-xl font-bold text-secondary mb-3">Our Vision</h3>
+<p class="text-gray-700">To be a world-class music institution that inspires national unity, preserves cultural heritage, and showcases Uganda's artistic excellence globally while maintaining the highest standards of professionalism in service.</p>
+</div>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Our Branches</h3>
+<div class="mb-12">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div style="background-image: url('Uganda_Police_Headquarters.jpg'); background-size: cover; background-position: center;" class="w-full h-[400px]"></div>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="branch-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('newpol.jpg');" class="h-48 bg-cover bg-center"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+<i class="ri-building-4-line text-primary"></i>
+</div>
+<h4 class="text-xl font-bold text-gray-800">Kampala Headquarters</h4>
+</div>
+<p class="text-gray-600 mb-4">Our main office is located in the heart of Kampala, Nsambya police barrack opposite American embassy.</p>
+<div class="space-y-2">
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<p class="text-gray-700">Ggaba road, Nsambya police barrack, Kampala, Uganda</p>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-phone-line"></i>
+</div>
+<p class="text-grey-700">+256 411 268 462</p><br>
+<p class="text-gray-700">+256 772 364 748</p>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-mail-line"></i>
+</div>
+<p class="text-gray-700">ugandapoliceband369@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="branch-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('rwizi1.jpg');" class="h-48 bg-cover bg-center"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+<i class="ri-building-line text-primary"></i>
+</div>
+<h4 class="text-xl font-bold text-gray-800">Rwizi Mbarara Branch</h4>
+</div>
+<p class="text-gray-600 mb-4">Our western region branch serves the Ankole region and beyond and specializes in traditional music and dance from western Uganda.</p>
+<div class="space-y-2">
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<p class="text-gray-700">KAMUKUZI, Mbarara, Uganda</p>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-phone-line"></i>
+</div>
+<p class="text-grey-700">+256 411 268 462</p><br><br><br>
+<p class="text-grey-700">+256 411 268 462</p>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-mail-line"></i>
+</div>
+<p class="text-gray-700">ugandapoliceband369@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="branch-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('ande.jpg');" class="h-48 bg-cover bg-center"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+<i class="ri-building-2-line text-primary"></i>
+</div>
+<h4 class="text-xl font-bold text-gray-800">North Kyoga Lira Branch</h4>
+</div>
+<p class="text-gray-600 mb-4">Our northern region branch focuses on the rich cultural traditions of northern Uganda and provides services across the region.</p>
+<div class="space-y-2">
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<p class="text-gray-700"> Lira, Uganda</p>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-phone-line"></i>
+</div>
+<p class="text-gray-700">+256 772 364 748</p><br>
+<p class="text-grey-700">+256 411 268 462</p>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-mail-line"></i>
+</div>
+<p class="text-gray-700">ugandapoliceband369@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Discover the wide range of classic musical and cultural services offered by the Uganda Police Force Music, Dance and Drama Department.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div id="brass-band" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('bnd2.jpg');" class="h-56 bg-cover bg-center"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Brass Band</h3>
+<p class="text-gray-600 mb-6">Our internationally recognized brass band performs at state functions, national ceremonies, public and private events. With over 40 skilled musicians, we offer a repertoire ranging from military marches to contemporary Ugandan compositions.</p>
+<div class="flex justify-between items-center">
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline">
+<span>Learn More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">Book Now</button>
+</div>
+</div>
+</div>
+<div id="jazz-band" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('jaz1.jpg');" class="h-56 bg-cover bg-center"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Jazz Band</h3>
+<p class="text-gray-600 mb-6">Our jazz ensemble brings a sophisticated musical experience to diplomatic functions, corporate events, and cultural festivals. The band specializes in African jazz, traditional Ugandan rhythms with jazz influences, and international standards.</p>
+<div class="flex justify-between items-center">
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline">
+<span>Learn More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">Book Now</button>
+</div>
+</div>
+</div>
+<div id="cultural-troupe" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('bnd3.png');" class="h-56 bg-cover bg-center"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Cultural Troupe</h3>
+<p class="text-gray-600 mb-6">Our cultural troupe showcases Uganda's diverse ethnic traditions through authentic dance, music, and dramatic performances. The troupe performs traditional dances from all regions of Uganda, preserving and promoting our rich cultural heritage.</p>
+<div class="flex justify-between items-center">
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline">
+<span>Learn More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">Book Now</button>
+</div>
+</div>
+</div>
+<div id="music-training" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('bnd9.jpg');" class="h-56 bg-cover bg-center"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Music Training</h3>
+<p class="text-gray-600 mb-6">We offer comprehensive music education programs for police officers, schools, and community members. Our courses cover instrumental training, music theory, vocal techniques, and traditional Ugandan music, taught by experienced instructors. our musci syllabus is from the <b><a href="https://www.abrsm.org/en-ug" target="_blank" class="text-blue-700 mb-3">Associated Royal Schools Of Music(ABRSM)</a></b></p>
+<div class="flex justify-between items-center">
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline">
+<span>Learn More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">Book Now</button>
+</div>
+</div>
+</div>
+<div id="instrument-repair" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('bnd21.jpg');" class="h-56 bg-cover bg-center"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Instrument Repair</h3>
+<p class="text-gray-600 mb-6">Our specialized workshop provides professional repair and maintenance services for brass, woodwind, string, and percussion instruments. Our technicians are trained to handle both Western and traditional African instruments with precision and care.</p>
+<div class="flex justify-between items-center">
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline">
+<span>Learn More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">Book Now</button>
+</div>
+</div>
+</div>
+<div id="choir" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div style="background-image: url('bnd1.jpg');" class="h-56 bg-cover bg-center"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Choir</h3>
+<p class="text-gray-600 mb-6">Our award-winning choir performs a diverse repertoire including traditional Ugandan songs, African spirituals, and international choral works. The choir has represented Uganda at international festivals and performs regularly at national events.</p>
+<div class="flex justify-between items-center">
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline">
+<span>Learn More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News Section -->
+<section id="news" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">News & Articles</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Stay updated with the latest news, upcoming performances, and cultural insights from the Uganda Police Force Music, Dance and Drama Department.</p>
+</div>
+<div class="mb-12">
+<div class="tab-switcher flex justify-center mb-8">
+<div class="bg-white rounded-full p-1 shadow-sm inline-flex">
+<button class="tab-btn active px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap">All</button>
+<button class="tab-btn px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap">Music</button>
+<button class="tab-btn px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap">Culture</button>
+<button class="tab-btn px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap">Performances</button>
+<button class="tab-btn px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap">Achievements</button>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+<div class="grid md:grid-cols-2">
+<div style="background-image: url('hipipo.jpg');" class="h-80 md:h-auto bg-cover bg-center"></div>
+<div class="p-8">
+<div class="flex items-center mb-4">
+<span class="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Achievement</span>
+<span class="text-gray-500 text-sm ml-3">may 01, 2025</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Uganda Police Band Wins Award  at HIPIPO Music Festival</h3>
+<p class="text-gray-600 mb-6">The Uganda Police Force Brass Band has been awarded the gold medal at the HIPIPO Music Festival held in Hotel Africana, Kampala. Competing against hundreds of musician for emerging as the best music video and performance(Mambo Bado ft Afande OJ and MIAH)in the year 2023 from around the Uganda, our musicians showcased Uganda's rich musical heritage while demonstrating exceptional technical skill and precision.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+<span>Read Full Article</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div style="background-image: url('IMG-20240121-WA0020.jpg');" class="h-48 bg-cover bg-center"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Culture</span>
+<span class="text-gray-500 text-sm ml-3">May 5, 2025</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-3">Preserving Uganda's Cultural Heritage Through Dance</h3>
+<p class="text-gray-600 mb-4">Our cultural troupe is working with elders from various ethnic communities to document and preserve traditional dances that are at risk of being forgotten in the modern era.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+<span>Read More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div style="background-image: url('facebk band1.jpg');" class="h-48 bg-cover bg-center"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Performances</span>
+<span class="text-gray-500 text-sm ml-3">May 2, 2025</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-3">Upcoming Performance: Independence Day Celebrations</h3>
+<p class="text-gray-600 mb-4">Join us for a special performance at the 63rd Independence Day celebrations on October 9th at Kololo Independence Grounds, featuring all our musical ensembles.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+<span>Read More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=Music%20workshop%20with%20students%20learning%20instruments%2C%20instructor%20demonstrating%2C%20classroom%20setting%2C%20engaged%20learning%2C%20professional%20photograph%2C%20daytime%2C%20educational%20environment&width=600&height=400&seq=14&orientation=landscape');" class="h-48 bg-cover bg-center"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Music</span>
+<span class="text-gray-500 text-sm ml-3">April 28, 2025</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-3">New Music Training Program for Youth Launches Next Month</h3>
+<p class="text-gray-600 mb-4">Our department is launching a new youth music education program that will provide free instrumental training to 100 talented young musicians from underserved communities.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+<span>Read More</span>
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+<a href="#" class="inline-flex items-center justify-center bg-white text-primary px-6 py-3 rounded-button font-medium border border-primary hover:bg-gray-50 transition-colors shadow-md whitespace-nowrap">
+<span>View All News</span>
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Article Edit/Create Modal -->
+<div id="article-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-60 flex items-center justify-center">
+  <div class="bg-white rounded-lg p-8 w-full max-w-lg mx-4 max-h-[90vh] overflow-y-auto">
+    <h2 id="article-modal-title" class="text-2xl font-bold text-gray-800 mb-6 text-center">Edit Article</h2>
+    <form id="article-form" class="space-y-6">
+      <div>
+        <label for="article-title" class="block text-gray-700 font-medium mb-2">Title</label>
+        <input type="text" id="article-title" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Article title" required>
+      </div>
+      <div>
+        <label for="article-content" class="block text-gray-700 font-medium mb-2">Content</label>
+        <textarea id="article-content" rows="6" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Article content" required></textarea>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium mb-2">Image Source</label>
+        <div class="flex items-center mb-4">
+          <div class="custom-radio checked" data-value="url"></div>
+          <label class="ml-2 text-gray-700">URL</label>
+        </div>
+        <div class="flex items-center mb-4">
+          <div class="custom-radio" data-value="upload"></div>
+          <label class="ml-2 text-gray-700">Upload from Device</label>
+        </div>
+      </div>
+      <div id="image-url-container">
+        <label for="article-image" class="block text-gray-700 font-medium mb-2">Image URL</label>
+        <input type="url" id="article-image" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="https://example.com/image.jpg">
+      </div>
+      <div id="image-upload-container" class="hidden">
+        <label for="article-image-file" class="block text-gray-700 font-medium mb-2">Upload Image</label>
+        <input type="file" id="article-image-file" accept="image/*" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary">
+      </div>
+      <div>
+        <label for="article-date" class="block text-gray-700 font-medium mb-2">Publication Date</label>
+        <input type="date" id="article-date" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" required>
+      </div>
+      <div>
+        <label for="article-category" class="block text-gray-700 font-medium mb-2">Category</label>
+        <select id="article-category" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" required>
+          <option value="" disabled selected>Select category</option>
+          <option value="Music">Music</option>
+          <option value="Culture">Culture</option>
+          <option value="Performances">Performances</option>
+          <option value="Achievements">Achievements</option>
+        </select>
+      </div>
+      <div class="flex justify-between items-center">
+        <button type="button" id="article-delete" class="bg-red-600 text-white px-4 py-2 rounded-button font-medium hover:bg-red-700 transition-colors hidden">Delete</button>
+        <div class="ml-auto flex gap-3">
+          <button type="button" id="article-cancel" class="bg-gray-300 text-gray-700 px-6 py-3 rounded-button font-medium hover:bg-gray-400 transition-colors">Cancel</button>
+          <button type="submit" id="article-save" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors">Save Article</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Booking Modal -->
+<div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg p-8 w-full max-w-lg mx-4 max-h-[90vh] overflow-y-auto">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Book Our Services</h2>
+    <form id="booking-form" class="space-y-6">
+      <div>
+        <label for="booking-service" class="block text-gray-700 font-medium mb-2">Service</label>
+        <select id="booking-service" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" required>
+          <option value="" disabled>Select a service</option>
+          <option value="brass-band">Brass Band</option>
+          <option value="jazz-band">Jazz Band</option>
+          <option value="cultural-troupe">Cultural Troupe</option>
+          <option value="music-training">Music Training</option>
+          <option value="instrument-repair">Instrument Repair</option>
+          <option value="choir">Choir</option>
+        </select>
+      </div>
+      <div>
+        <label for="booking-date" class="block text-gray-700 font-medium mb-2">Date</label>
+        <input type="date" id="booking-date" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" required>
+      </div>
+      <div>
+        <label for="booking-time" class="block text-gray-700 font-medium mb-2">Time</label>
+        <input type="time" id="booking-time" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" required>
+      </div>
+      <div>
+        <label for="booking-name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+        <input type="text" id="booking-name" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Your full name" required>
+      </div>
+      <div>
+        <label for="booking-email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+        <input type="email" id="booking-email" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Your email" required>
+      </div>
+      <div>
+        <label for="booking-phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+        <input type="tel" id="booking-phone" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Your phone number" required>
+      </div>
+      <div>
+        <label for="booking-message" class="block text-gray-700 font-medium mb-2">Message</label>
+        <textarea id="booking-message" rows="4" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Additional details or message"></textarea>
+      </div>
+      <div class="flex gap-3">
+        <button type="button" id="booking-cancel" class="flex-1 bg-gray-300 text-gray-700 px-6 py-3 rounded-button font-medium hover:bg-gray-400 transition-colors">Cancel</button>
+        <button type="submit" class="flex-1 bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors">Submit Booking</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Get in touch with the Uganda Police Force Music, Dance and Drama Department for inquiries, bookings, or more information about our services.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Your name">
+</div>
+<div>
+<label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Your email">
+</div>
+</div>
+<div>
+<label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+<input type="tel" id="phone" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Your phone number">
+</div>
+<div>
+<label class="block text-gray-700 font-medium mb-2">Inquiry Type</label>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center">
+<div class="custom-radio" data-value="booking"></div>
+<label class="ml-2 text-gray-700">Booking Request</label>
+</div>
+<div class="flex items-center">
+<div class="custom-radio" data-value="information"></div>
+<label class="ml-2 text-gray-700">Information</label>
+</div>
+<div class="flex items-center">
+<div class="custom-radio" data-value="training"></div>
+<label class="ml-2 text-gray-700">Training</label>
+</div>
+<div class="flex items-center">
+<div class="custom-radio" data-value="other"></div>
+<label class="ml-2 text-gray-700">Other</label>
+</div>
+</div>
+</div>
+<div>
+<label for="service" class="block text-gray-700 font-medium mb-2">Service of Interest</label>
+<div class="relative">
+<select id="service" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary appearance-none pr-8">
+<option value="" selected disabled>Select a service</option>
+<option value="brass-band">Brass Band</option>
+<option value="jazz-band">Jazz Band</option>
+<option value="cultural-troupe">Cultural Troupe</option>
+<option value="music-training">Music Training</option>
+<option value="instrument-repair">Instrument Repair</option>
+<option value="choir">Choir</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+<textarea id="message" rows="4" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="Your message"></textarea>
+</div>
+<div class="flex items-center">
+<div class="custom-checkbox" data-checked="false"></div>
+<label class="ml-2 text-gray-700">I agree to the privacy policy and terms of service</label>
+</div>
+<button type="submit" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-md whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+<div class="bg-gray-50 rounded-lg p-6 mb-8">
+<h4 class="text-lg font-bold text-gray-800 mb-4">Headquarters - Kampala</h4>
+<div class="space-y-3">
+<div class="flex items-start">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-1 mr-3">
+<i class="ri-map-pin-line"></i>
+</div>
+<div>
+<p class="text-gray-700">Ggaba road, Nsambya opposite American Embassy</p>
+<p class="text-gray-700">Kampala, Uganda</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-1 mr-3">
+<i class="ri-phone-line"></i>
+</div>
+<div>
+<p class="text-gray-700">+256 411 268 462</p>
+<p class="text-gray-700">+256 772 364 748</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-1 mr-3">
+<i class="ri-mail-line"></i>
+</div>
+<div>
+<p class="text-gray-700">ugandapoliceband369@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-1 mr-3">
+<i class="ri-time-line"></i>
+</div>
+<div>
+<p class="text-gray-700">Monday - Monday: 6:00 AM - 6:00 AM</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div class="bg-gray-50 rounded-lg p-4">
+<h4 class="text-lg font-bold text-gray-800 mb-3">Rwizi Mbarara Branch</h4>
+<div class="space-y-2 text-sm">
+<p class="text-gray-700"><i class="ri-map-pin-line mr-1"></i> KAMUKUZI headquarters, Mbarara</p>
+<p class="text-gray-700"><i class="ri-phone-line mr-1"></i> +256 411 268 462 </p>
+<p class="text-gray-700"><i class="ri-phone-line mr-1"></i> +256 717 683 863</p>
+<p class="text-gray-700"><i class="ri-phone-line mr-1"></i> +256 772 364 748</p>
+<p class="text-gray-700"><i class="ri-mail-line mr-1"></i> ugandapoliceband369@gmail.com</p>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg p-4">
+<h4 class="text-lg font-bold text-gray-800 mb-3">North Kyoga Lira Branch</h4>
+<div class="space-y-2 text-sm">
+<p class="text-gray-700"><i class="ri-map-pin-line mr-1"></i> Adekokwok parish, lira city, Lira</p>
+<p class="text-gray-700"><i class="ri-phone-line mr-1"></i> +256 411 268 462 </p>
+<p class="text-gray-700"><i class="ri-phone-line mr-1"></i> +256 717 683 863</p>
+<p class="text-gray-700"><i class="ri-phone-line mr-1"></i> +256 772 364 748</p>
+<p class="text-gray-700"><i class="ri-mail-line mr-1"></i> ugandapoliceband369@gmail.com</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg overflow-hidden h-[300px]">
+<div style="background-image: url('map1.jpg'); background-size: cover; background-position: center;" class="w-full h-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Find answers to common questions about our services, booking process, and more.</p>
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="space-y-6">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-800">How can I book the Uganda Police Band for an event?</span>
+<i class="ri-arrow-down-s-line text-xl text-gray-500"></i>
+</button>
+<div class="faq-content px-6 pb-4 hidden">
+<p class="text-gray-600">You can book our band by filling out the contact form on this website, calling our booking office directly, or visiting any of our branch offices. We recommend booking at least 4-6 weeks in advance for major events to ensure availability.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-800">What types of events do you perform at?</span>
+<i class="ri-arrow-down-s-line text-xl text-gray-500"></i>
+</button>
+<div class="faq-content px-6 pb-4 hidden">
+<p class="text-gray-600">We perform at a wide range of events including state functions, national ceremonies, corporate events, cultural festivals, weddings, graduation ceremonies, community celebrations, and international events. Our different ensembles can be tailored to suit the specific needs and atmosphere of your event.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-800">Do you offer music training for non-police personnel?</span>
+<i class="ri-arrow-down-s-line text-xl text-gray-500"></i>
+</button>
+<div class="faq-content px-6 pb-4 hidden">
+<p class="text-gray-600">Yes, we offer music training programs for the general public, schools, and community groups. Our training programs cover various instruments, vocal techniques, music theory, and traditional Ugandan music. We have special programs for youth and beginners, as well as advanced courses for experienced musicians.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-800">What is the cost of booking your services?</span>
+<i class="ri-arrow-down-s-line text-xl text-gray-500"></i>
+</button>
+<div class="faq-content px-6 pb-4 hidden">
+<p class="text-gray-600">Our pricing varies depending on the type of service, duration, location, and specific requirements. We offer special rates for government institutions, schools, and non-profit organizations. Please contact our booking office for a customized quote based on your specific needs.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 flex justify-between items-center focus:outline-none">
+<span class="text-lg font-medium text-gray-800">Can your cultural troupe perform specific ethnic dances?</span>
+<i class="ri-arrow-down-s-line text-xl text-gray-500"></i>
+</button>
+<div class="faq-content px-6 pb-4 hidden">
+<p class="text-gray-600">Yes, our cultural troupe is proficient in traditional dances from all regions of Uganda, including Acholi, Baganda, Banyankole, Basoga, Batoro, Karamojong, and many others. We can customize performances to showcase specific ethnic traditions or provide a diverse representation of Uganda's cultural heritage.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Download Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="bg-primary/5 rounded-xl p-8 md:p-12">
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<div>
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Download Our Resources</h2>
+<p class="text-gray-600 mb-6">Access our brochures, event programs, and educational materials to learn more about our services and cultural initiatives.</p>
+<div class="space-y-4">
+<a href="#" class="flex items-center bg-white rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+<i class="ri-file-pdf-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Services Brochure</h4>
+<p class="text-sm text-gray-500">PDF, 2.4 MB</p>
+</div>
+<div class="ml-auto w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-download-line"></i>
+</div>
+</a>
+<a href="#" class="flex items-center bg-white rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+<i class="ri-calendar-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">2025 Performance Calendar</h4>
+<p class="text-sm text-gray-500">PDF, 1.8 MB</p>
+</div>
+<div class="ml-auto w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-download-line"></i>
+</div>
+</a>
+<a href="#" class="flex items-center bg-white rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+<i class="ri-book-open-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Music Training Program Guide</h4>
+<p class="text-sm text-gray-500">PDF, 3.1 MB</p>
+</div>
+<div class="ml-auto w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-download-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="hidden md:block">
+<img src="https://readdy.ai/api/search-image?query=Stack%20of%20professional%20brochures%20and%20documents%20with%20Uganda%20Police%20logo%2C%20neatly%20arranged%20on%20wooden%20desk%2C%20high-quality%20professional%20photograph%2C%20clean%20design%2C%20marketing%20materials%2C%20official%20documents&width=600&height=400&seq=15&orientation=landscape" alt="Resources" class="rounded-lg shadow-md w-full h-auto">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Admin Login Modal -->
+<div id="admin-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg p-8 w-full max-w-md mx-4">
+<h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Admin Login</h2>
+<form id="admin-login-form">
+<div class="mb-4">
+<label for="admin-email" class="block text-gray-700 font-medium mb-2">Email</label>
+<input type="email" id="admin-email" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="admin@admin.com" required>
+</div>
+<div class="mb-6">
+<label for="admin-password" class="block text-gray-700 font-medium mb-2">Password</label>
+<input type="password" id="admin-password" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary" placeholder="admin" required>
+</div>
+<div class="flex gap-4">
+<button type="button" id="admin-cancel" class="flex-1 bg-gray-300 text-gray-700 px-6 py-3 rounded-button font-medium hover:bg-gray-400 transition-colors">Cancel</button>
+<button type="submit" class="flex-1 bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors">Login</button>
+</div>
+</form>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid md:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center mr-3">
+<img src="logo.jpg" alt="Uganda Police Force Logo" class="w-full h-full object-contain">
+</div>
+<div>
+<h3 class="text-white font-bold text-xl">Uganda Police Force</h3>
+<p class="text-gray-400 text-xs">Music, Dance & Drama Department</p>
+</div>
+</div>
+<p class="text-gray-400 mb-6">Preserving and promoting Uganda's cultural heritage through excellence in music, dance, and drama while serving the nation with pride.</p>
+<div class="flex space-x-4">
+<a href="https:/www.facebook.com/ojwang.senior" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary/80 transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary/80 transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary/80 transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+<a href="#" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary/80 transition-colors">
+<i class="ri-tiktok-fill"></i>
+</a>
+<a href="#" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary/80 transition-colors">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="https://wa.me/0781068086" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary/80 transition-colors">
+<i class="ri-whatsapp-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+<li><a href="#news" class="text-gray-400 hover:text-white transition-colors">News & Articles</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+<li><a href="https://upf.go.ug/" class="text-gray-400 hover:text-white transition-colors">UPF website</a></li>
+<li><a href="#" id="admin-login-link" class="text-gray-400 hover:text-white transition-colors">Admin Login</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Our Services</h4>
+<ul class="space-y-3">
+<li><a href="#brass-band" class="text-gray-400 hover:text-white transition-colors">Brass Band</a></li>
+<li><a href="#jazz-band" class="text-gray-400 hover:text-white transition-colors">Jazz Band</a></li>
+<li><a href="#cultural-troupe" class="text-gray-400 hover:text-white transition-colors">Cultural Troupe</a></li>
+<li><a href="#music-training" class="text-gray-400 hover:text-white transition-colors">Music Training</a></li>
+<li><a href="#instrument-repair" class="text-gray-400 hover:text-white transition-colors">Instrument Repair</a></li>
+<li><a href="#choir" class="text-gray-400 hover:text-white transition-colors">Choir</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Contact Information</h4>
+<ul class="space-y-4">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-400">Ggaba road, Nsambya barracks opposite American Embassy, Kampala, Uganda</span>
+</li>
+<li class="flex items-start">
+    <div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+    <i class="ri-phone-line"></i>
+    </div>
+    <span class="text-gray-400">+256 411 268 462</span>
+    </li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-400">+256 772 364 748</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">ugandapoliceband369@gmail.com</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+<i class="ri-time-line"></i>
+</div>
+<span class="text-gray-400">Monday - Monday: 06:00 AM - 06:00 AM</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 mb-4 md:mb-0">© 2025 Uganda Police Force - Music, Dance and Drama Department. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-500 hover:text-white transition-colors">Sitemap</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Chat Widget -->
+<div id="whatsapp-widget" class="fixed bottom-6 right-6 z-50 animate-bounce">
+<a href="https://wa.me/0781068086" target="_blank" class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110">
+<i class="ri-whatsapp-line text-2xl"></i>
+</a>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// WhatsApp widget movement
+let lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+const whatsappWidget = document.getElementById('whatsapp-widget');
+const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+if (currentScroll > lastScrollTop) {
+// Scrolling down
+whatsappWidget.style.transform = 'translateY(20px)';
+whatsappWidget.style.opacity = '0.5';
+} else {
+// Scrolling up
+whatsappWidget.style.transform = 'translateY(0)';
+whatsappWidget.style.opacity = '1';
+}
+whatsappWidget.style.transition = 'all 0.3s ease-in-out';
+lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+const isOpen = !mobileMenu.classList.contains('hidden');
+mobileMenuButton.innerHTML = isOpen ?
+'<i class="ri-close-line text-2xl"></i>' :
+'<i class="ri-menu-line text-2xl"></i>';
+});
+// FAQ toggles
+const faqToggles = document.querySelectorAll('.faq-toggle');
+faqToggles.forEach(toggle => {
+toggle.addEventListener('click', function() {
+const content = this.nextElementSibling;
+const icon = this.querySelector('i');
+content.classList.toggle('hidden');
+if (!content.classList.contains('hidden')) {
+icon.classList.remove('ri-arrow-down-s-line');
+icon.classList.add('ri-arrow-up-s-line');
+} else {
+icon.classList.remove('ri-arrow-up-s-line');
+icon.classList.add('ri-arrow-down-s-line');
+}
+});
+});
+// Tab switcher
+const tabButtons = document.querySelectorAll('.tab-btn');
+tabButtons.forEach(button => {
+button.addEventListener('click', function() {
+tabButtons.forEach(btn => btn.classList.remove('active'));
+this.classList.add('active');
+});
+});
+// Custom radio buttons
+const customRadios = document.querySelectorAll('.custom-radio');
+customRadios.forEach(radio => {
+radio.addEventListener('click', function() {
+const name = this.getAttribute('data-value');
+// Find all radios in the same group
+const groupRadios = document.querySelectorAll(`.custom-radio[data-value]`);
+// Uncheck all
+groupRadios.forEach(r => r.classList.remove('checked'));
+// Check this one
+this.classList.add('checked');
+});
+});
+
+// Image source radios for article modal
+const imageSourceRadios = document.querySelectorAll('#article-modal .custom-radio[data-value="url"], #article-modal .custom-radio[data-value="upload"]');
+imageSourceRadios.forEach(radio => {
+radio.addEventListener('click', function() {
+const value = this.getAttribute('data-value');
+const urlContainer = document.getElementById('image-url-container');
+const uploadContainer = document.getElementById('image-upload-container');
+if (value === 'url') {
+urlContainer.classList.remove('hidden');
+uploadContainer.classList.add('hidden');
+} else {
+urlContainer.classList.add('hidden');
+uploadContainer.classList.remove('hidden');
+}
+});
+});
+// Custom checkbox
+const customCheckboxes = document.querySelectorAll('.custom-checkbox');
+customCheckboxes.forEach(checkbox => {
+checkbox.addEventListener('click', function() {
+const isChecked = this.getAttribute('data-checked') === 'true';
+this.setAttribute('data-checked', !isChecked);
+if (!isChecked) {
+this.classList.add('checked');
+} else {
+this.classList.remove('checked');
+}
+});
+});
+// Custom switch
+const customSwitches = document.querySelectorAll('.custom-switch');
+customSwitches.forEach(switchEl => {
+switchEl.addEventListener('click', function() {
+this.classList.toggle('active');
+});
+});
+
+// Admin login modal
+const adminLoginLink = document.getElementById('admin-login-link');
+const adminModal = document.getElementById('admin-modal');
+const adminCancel = document.getElementById('admin-cancel');
+const adminLoginForm = document.getElementById('admin-login-form');
+
+adminLoginLink.addEventListener('click', function(e) {
+e.preventDefault();
+adminModal.classList.remove('hidden');
+});
+
+adminCancel.addEventListener('click', function() {
+adminModal.classList.add('hidden');
+});
+
+adminLoginForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email = document.getElementById('admin-email').value;
+  const password = document.getElementById('admin-password').value;
+
+  // Try server login first
+  try {
+    const resp = await fetch('/api/admin/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    if (resp.ok) {
+      const data = await resp.json();
+      window.adminToken = data.token;
+      localStorage.setItem('mdd_admin_token', data.token);
+      alert('Login successful! You can now edit the website contents.');
+      adminModal.classList.add('hidden');
+      enableEditingMode();
+      return;
+    }
+  } catch (err) {
+    // ignore, fallback to demo
+    console.warn('Server login failed, falling back to demo auth', err);
+  }
+
+  // Fallback demo login (client-side)
+  if (email === 'admin@admin.com' && password === 'admin') {
+    alert('Login successful (demo)! You can now edit the website contents.');
+    adminModal.classList.add('hidden');
+    window.adminToken = localStorage.getItem('mdd_admin_token') || null;
+    enableEditingMode();
+  } else {
+    alert('Invalid credentials. Please try again.');
+  }
+});
+
+function readFileAsDataURL(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function enableEditingMode() {
+  // Make only the News & Articles section editable
+  const newsSection = document.getElementById('news');
+  if (!newsSection) return;
+
+  // Add edit icons to article cards. Map icons to the articles array indexes via data attributes.
+  const articleCards = newsSection.querySelectorAll('.bg-white.rounded-lg.shadow-md.overflow-hidden');
+  const nonFeatured = Array.from(articleCards).slice(1);
+  nonFeatured.forEach((card) => {
+    // only add an edit icon if one doesn't already exist
+    if (card.querySelector('.edit-icon')) return;
+    const idx = parseInt(card.dataset.articleIndex ?? '-1', 10);
+    // skip cards that are not backed by stored articles
+    if (isNaN(idx) || idx < 0) return;
+    const editIcon = document.createElement('div');
+    editIcon.className = 'edit-icon absolute top-4 right-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white cursor-pointer opacity-0 hover:opacity-100 transition-opacity';
+    editIcon.innerHTML = '<i class="ri-edit-line"></i>';
+    editIcon.onclick = () => openArticleModal(null, idx);
+    card.style.position = 'relative';
+    card.appendChild(editIcon);
+  });
+
+  // Add "Create New Article" button
+  // Create button (idempotent)
+  let createButton = document.getElementById('create-article-btn');
+  if (!createButton) {
+    createButton = document.createElement('button');
+    createButton.id = 'create-article-btn';
+    createButton.textContent = 'Create New Article';
+    createButton.className = 'bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors shadow-md fixed top-4 right-4 z-50';
+    createButton.onclick = () => openArticleModal(null, -1);
+    document.body.appendChild(createButton);
+  }
+
+
+  // Admin buttons container
+  let adminButtonsContainer = document.getElementById('admin-buttons-container');
+  if (!adminButtonsContainer) {
+    adminButtonsContainer = document.createElement('div');
+    adminButtonsContainer.id = 'admin-buttons-container';
+    adminButtonsContainer.className = 'fixed top-4 right-4 z-50 flex flex-col space-y-2';
+    document.body.appendChild(adminButtonsContainer);
+  }
+
+  // Export button
+  if (!document.getElementById('export-articles-btn')) {
+    const exportBtn = document.createElement('button');
+    exportBtn.id = 'export-articles-btn';
+    exportBtn.textContent = 'Export Articles';
+    exportBtn.className = 'bg-white text-primary px-4 py-2 rounded-button font-medium border border-primary';
+    exportBtn.onclick = exportArticles;
+    adminButtonsContainer.appendChild(exportBtn);
+  }
+
+  // Import button
+  if (!document.getElementById('import-articles-btn')) {
+    const importBtn = document.createElement('button');
+    importBtn.id = 'import-articles-btn';
+    importBtn.textContent = 'Import Articles';
+    importBtn.className = 'bg-white text-primary px-4 py-2 rounded-button font-medium border border-primary';
+    importBtn.onclick = () => document.getElementById('import-file-input').click();
+    adminButtonsContainer.appendChild(importBtn);
+  }
+
+  // Hidden file input for import
+  if (!document.getElementById('import-file-input')) {
+    const importInput = document.createElement('input');
+    importInput.type = 'file';
+    importInput.accept = 'application/json';
+    importInput.id = 'import-file-input';
+    importInput.className = 'hidden';
+    importInput.onchange = handleImportFile;
+    document.body.appendChild(importInput);
+  }
+
+  // Add modal event listeners
+  setupModalListeners();
+}
+
+function saveChanges() {
+// For demonstration, we'll use localStorage to save changes
+const editableElements = document.querySelectorAll('[contenteditable="true"]');
+editableElements.forEach((el, index) => {
+localStorage.setItem(`editable-${index}`, el.innerHTML);
+});
+alert('Changes saved locally! (Note: This is a demo - changes persist in browser storage)');
+
+// Replace save button with logout button
+const saveButton = document.querySelector('button[onclick="saveChanges()"]');
+if (saveButton) {
+  saveButton.textContent = 'Logout';
+  saveButton.onclick = logout;
+}
+}
+
+function logout() {
+  // Disable editing mode
+  const newsSection = document.getElementById('news');
+  if (newsSection) {
+    // Hide edit icons
+    const editIcons = newsSection.querySelectorAll('.edit-icon');
+    editIcons.forEach(icon => {
+      icon.style.display = 'none';
+    });
+  }
+
+  const editableElements = document.querySelectorAll('[contenteditable="true"]');
+  editableElements.forEach(el => {
+    el.contentEditable = false;
+    el.style.border = '';
+    el.style.padding = '';
+  });
+
+  // Remove the create button
+  const createButton = document.querySelector('button[onclick*="openArticleModal(null, -1)"]');
+  if (createButton) {
+    createButton.remove();
+  }
+
+  alert('Logged out successfully!');
+}
+
+function openArticleModal(card, index) {
+  const modal = document.getElementById('article-modal');
+  const modalTitle = document.getElementById('article-modal-title');
+  const form = document.getElementById('article-form');
+
+  // If index is provided (>=0) prefer loading from stored articles so indexes align
+  if (typeof index === 'number' && index >= 0) {
+    const articles = JSON.parse(localStorage.getItem('mdd_articles') || '[]');
+    const article = articles[index];
+    if (article) {
+      modalTitle.textContent = 'Edit Article';
+      document.getElementById('article-title').value = article.title || '';
+      document.getElementById('article-content').value = article.content || '';
+      document.getElementById('article-category').value = article.category || '';
+      document.getElementById('article-date').value = article.date ? new Date(article.date).toISOString().split('T')[0] : '';
+      document.getElementById('article-image').value = article.image || '';
+      form.dataset.editIndex = index;
+      const deleteBtn = document.getElementById('article-delete');
+      if (deleteBtn) deleteBtn.classList.remove('hidden');
+    } else {
+      alert('Article not found for editing.');
+      return;
+    }
+  } else if (card) {
+    // Fallback: extract data from the provided card
+    modalTitle.textContent = 'Edit Article';
+    const title = card.querySelector('h3')?.textContent || '';
+    const content = card.querySelector('p')?.textContent || '';
+    const category = card.querySelector('.bg-primary\/10')?.textContent.trim() || '';
+    const date = card.querySelector('.text-gray-500')?.textContent || '';
+    const image = card.querySelector('.bg-cover')?.style.backgroundImage.match(/url\(["']?([^"']*)["']?\)/)?.[1] || '';
+
+    document.getElementById('article-title').value = title;
+    document.getElementById('article-content').value = content;
+    document.getElementById('article-category').value = category;
+    document.getElementById('article-date').value = date ? new Date(date).toISOString().split('T')[0] : '';
+    document.getElementById('article-image').value = image;
+
+    form.dataset.editIndex = '-1';
+    const deleteBtn = document.getElementById('article-delete');
+    if (deleteBtn) deleteBtn.classList.remove('hidden');
+  } else {
+    // Creating new article
+    modalTitle.textContent = 'Create New Article';
+    form.reset();
+    form.dataset.editIndex = '-1';
+    const deleteBtn = document.getElementById('article-delete');
+    if (deleteBtn) deleteBtn.classList.add('hidden');
+  }
+
+  modal.classList.remove('hidden');
+}
+
+function setupModalListeners() {
+  const modal = document.getElementById('article-modal');
+  const cancelBtn = document.getElementById('article-cancel');
+  const form = document.getElementById('article-form');
+
+  const deleteBtn = document.getElementById('article-delete');
+  if (form.dataset.listenersAdded === 'true') return; // already wired
+
+  // Close modal on cancel
+  if (cancelBtn) {
+    cancelBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+  }
+
+  // Handle form submission
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      saveArticle();
+    });
+  }
+
+  // Delete handler (confirm then delete)
+  if (deleteBtn) {
+    deleteBtn.addEventListener('click', () => {
+      const confirmed = confirm('Are you sure you want to delete this article? This action cannot be undone.');
+      if (confirmed) {
+        deleteArticle();
+      }
+    });
+  }
+
+  // mark listeners added
+  form.dataset.listenersAdded = 'true';
+}
+
+function saveArticle() {
+  const form = document.getElementById('article-form');
+  const editIndex = parseInt(form.dataset.editIndex);
+
+  const title = document.getElementById('article-title').value;
+  const content = document.getElementById('article-content').value;
+  const category = document.getElementById('article-category').value;
+  const date = document.getElementById('article-date').value;
+  const image = document.getElementById('article-image').value;
+
+  const articleData = {
+    title,
+    content,
+    category,
+    date,
+    image
+  };
+
+  // If admin token exists, call backend API for persistence
+  const token = window.adminToken || localStorage.getItem('mdd_admin_token');
+  if (token) {
+    (async () => {
+      try {
+        if (editIndex >= 0 && !isNaN(editIndex)) {
+          // editIndex may represent DB id
+          const resp = await fetch(`/api/articles/${editIndex}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+            body: JSON.stringify(articleData)
+          });
+          if (!resp.ok) throw new Error('Update failed');
+        } else {
+          const resp = await fetch('/api/articles', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+            body: JSON.stringify(articleData)
+          });
+          if (!resp.ok) throw new Error('Create failed');
+        }
+        await updateNewsSection();
+        document.getElementById('article-modal').classList.add('hidden');
+        const deleteBtn = document.getElementById('article-delete');
+        if (deleteBtn) deleteBtn.classList.add('hidden');
+        alert('Article saved successfully (server).');
+      } catch (err) {
+        alert('Server save failed: ' + err.message);
+      }
+    })();
+    return;
+  }
+
+  // Fallback: Save to localStorage (demo implementation)
+  let articles = JSON.parse(localStorage.getItem('mdd_articles') || '[]');
+  if (editIndex >= 0) {
+    articles[editIndex] = articleData;
+  } else {
+    articles.push(articleData);
+  }
+  localStorage.setItem('mdd_articles', JSON.stringify(articles));
+  updateNewsSection();
+  document.getElementById('article-modal').classList.add('hidden');
+  const deleteBtn = document.getElementById('article-delete');
+  if (deleteBtn) deleteBtn.classList.add('hidden');
+  alert('Article saved locally (demo).');
+}
+
+function deleteArticle() {
+  const form = document.getElementById('article-form');
+  const editIndex = parseInt(form.dataset.editIndex);
+  if (isNaN(editIndex) || editIndex < 0) {
+    alert('Cannot delete: no article selected.');
+    return;
+  }
+  const token = window.adminToken || localStorage.getItem('mdd_admin_token');
+  if (token) {
+    (async () => {
+      try {
+        const resp = await fetch(`/api/articles/${editIndex}`, { method: 'DELETE', headers: { 'x-admin-token': token } });
+        if (!resp.ok) throw new Error('Delete failed');
+        await updateNewsSection();
+        document.getElementById('article-modal').classList.add('hidden');
+        alert('Article deleted successfully (server).');
+        const deleteBtn = document.getElementById('article-delete');
+        if (deleteBtn) deleteBtn.classList.add('hidden');
+      } catch (err) {
+        alert('Server delete failed: ' + err.message);
+      }
+    })();
+    return;
+  }
+
+  // Fallback localStorage delete
+  let articles = JSON.parse(localStorage.getItem('mdd_articles') || '[]');
+  if (editIndex >= articles.length) {
+    alert('Article not found.');
+    return;
+  }
+  articles.splice(editIndex, 1);
+  localStorage.setItem('mdd_articles', JSON.stringify(articles));
+  updateNewsSection();
+  document.getElementById('article-modal').classList.add('hidden');
+  alert('Article deleted successfully (local).');
+  const deleteBtn = document.getElementById('article-delete');
+  if (deleteBtn) deleteBtn.classList.add('hidden');
+}
+
+async function updateNewsSection() {
+  const newsGrid = document.querySelector('#news .grid.md\\:grid-cols-2.lg\\:grid-cols-3');
+  if (!newsGrid) return;
+
+  // Clear existing articles (except featured)
+  const existingCards = newsGrid.querySelectorAll('.bg-white.rounded-lg.shadow-md.overflow-hidden');
+  existingCards.forEach((card, index) => {
+    if (index > 0) { // Skip featured article
+      card.remove();
+    }
+  });
+
+  // Fetch articles from server
+  let articles = [];
+  try {
+    const resp = await fetch('/api/articles');
+    if (resp.ok) articles = await resp.json();
+  } catch (err) {
+    console.warn('Failed to fetch articles from API, falling back to localStorage', err);
+    articles = JSON.parse(localStorage.getItem('mdd_articles') || '[]');
+  }
+
+  // Add fetched articles
+  articles.forEach((article, index) => {
+    const card = document.createElement('div');
+    card.className = 'bg-white rounded-lg shadow-md overflow-hidden relative';
+    card.innerHTML = `
+      <div style="background-image: url('${article.image || 'https://readdy.ai/api/search-image?query=Music%20workshop%20with%20students%20learning%20instruments%2C%20instructor%20demonstrating%2C%20classroom%20setting%2C%20engaged%20learning%2C%20professional%20photograph%2C%20daytime%2C%20educational%20environment&width=600&height=400&seq=14&orientation=landscape'}');" class="h-48 bg-cover bg-center"></div>
+      <div class="p-6">
+        <div class="flex items-center mb-4">
+          <span class="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">${article.category}</span>
+          <span class="text-gray-500 text-sm ml-3">${new Date(article.date).toLocaleDateString()}</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">${article.title}</h3>
+        <p class="text-gray-600 mb-4">${article.content}</p>
+        <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+          <span>Read More</span>
+          <i class="ri-arrow-right-line ml-1"></i>
+        </a>
+      </div>
+    `;
+
+    // Tag card with its article index for admin editing (use DB id where available)
+    card.dataset.articleIndex = article.id ?? index;
+    newsGrid.appendChild(card);
+  });
+}
+
+  // Export articles as JSON file
+  function exportArticles() {
+    (async () => {
+      const token = window.adminToken || localStorage.getItem('mdd_admin_token');
+      let articles = [];
+      try {
+        const resp = await fetch('/api/articles');
+        if (resp.ok) articles = await resp.json();
+        else articles = JSON.parse(localStorage.getItem('mdd_articles') || '[]');
+      } catch (err) {
+        articles = JSON.parse(localStorage.getItem('mdd_articles') || '[]');
+      }
+      const dataStr = JSON.stringify(articles, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'mdd_articles_export.json';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    })();
+  }
+
+  // Handle import file selection
+  function handleImportFile(e) {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const parsed = JSON.parse(ev.target.result);
+        if (!Array.isArray(parsed)) throw new Error('Invalid format');
+        const token = window.adminToken || localStorage.getItem('mdd_admin_token');
+        if (token) {
+          // send to server bulk import
+          fetch('/api/articles/bulk', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+            body: JSON.stringify(parsed)
+          }).then(r => {
+            if (r.ok) {
+              updateNewsSection();
+              alert('Articles imported to server successfully');
+            } else {
+              r.text().then(t => alert('Server import failed: ' + t));
+            }
+          }).catch(err => alert('Server import failed: ' + err.message));
+        } else {
+          localStorage.setItem('mdd_articles', JSON.stringify(parsed));
+          updateNewsSection();
+          alert('Articles imported successfully (local)');
+        }
+      } catch (err) {
+        alert('Failed to import: ' + err.message);
+      }
+    };
+    reader.readAsText(file);
+    // reset input
+    e.target.value = '';
+  }
+
+// Ensure articles from localStorage are loaded on page load
+  updateNewsSection();
+
+  // Booking modal functionality
+  const bookNowButtons = document.querySelectorAll('.service-card button');
+  bookNowButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const serviceCard = this.closest('.service-card');
+      const serviceName = serviceCard.querySelector('h3').textContent;
+      const serviceMap = {
+        'Brass Band': 'brass-band',
+        'Jazz Band': 'jazz-band',
+        'Cultural Troupe': 'cultural-troupe',
+        'Music Training': 'music-training',
+        'Instrument Repair': 'instrument-repair',
+        'Choir': 'choir'
+      };
+      const serviceValue = serviceMap[serviceName] || '';
+      document.getElementById('booking-service').value = serviceValue;
+      document.getElementById('booking-modal').classList.remove('hidden');
+    });
+  });
+
+  // Booking modal cancel
+  const bookingCancel = document.getElementById('booking-cancel');
+  bookingCancel.addEventListener('click', function() {
+    document.getElementById('booking-modal').classList.add('hidden');
+  });
+
+  // Booking form submit
+  const bookingForm = document.getElementById('booking-form');
+  bookingForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // For demo, just show alert
+    alert('Booking request submitted! We will contact you soon.');
+    document.getElementById('booking-modal').classList.add('hidden');
+    bookingForm.reset();
+  });
+});
+</script>
+</body>
+</html>
